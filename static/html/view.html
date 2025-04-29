@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>View Attendance</title>
+    <style>
+        /* Center-align the title */
+        h1 {
+            text-align: center;
+            margin-top: 50px;
+            font-size: 50px;
+            color:#0934b5;
+        }
+
+        /* Full-screen table */
+        .table-container {
+            width: 100%;
+            height: 10vh;  /* Full height minus some margin for title */
+            overflow-y: auto;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        table {
+            width: 90%; /* Table width 90% of the screen */
+            border-collapse: collapse;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+
+        /* Header row styling */
+        th {
+            background-color: #b873a0;
+            color: white;
+            padding: 15px;
+            text-align: center;
+            font-size: 16px;
+        }
+
+        /* Table rows styling */
+        tr:nth-child(even) {
+            background-color: #f9f9f9;
+        }
+
+        tr:nth-child(odd) {
+            background-color: #e9e9e9;
+        }
+
+        /* Table data cells styling */
+        td {
+            text-align: center;
+            padding: 12px;
+            border: 1px solid #000000;
+            font-size: 14px;
+        }
+
+        /* Styling for no records message */
+        p {
+            text-align: center;
+            font-size: 18px;
+            color: #888;
+        }
+
+    </style>
+</head>
+<body>
+    <h1>Attendance Records</h1>
+    
+    <div class="table-container">
+        {% if records %}
+            <table>
+                <thead>
+                    <tr>
+                        <th>Seq. No.</th>
+                        <th>Name</th>
+                        <th>Date</th>
+                        <th>Time</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    {% for record in records %}
+                    <tr>
+                        <td>{{ loop.index }}</td>  <!-- Sequence number added here -->
+                        <td>{{ record.name }}</td>
+                        <td>{{ record.date }}</td>
+                        <td>{{ record.time }}</td>
+                    </tr>
+                    {% endfor %}
+                </tbody>
+            </table>
+        {% else %}
+            <p>No attendance records found.</p>
+        {% endif %}
+    </div>
+
+</body>
+</html>

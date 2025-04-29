@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Face Tracer</title>
+  <link rel="shortcut icon" href="{{ url_for('static', filename='favicon.jpg') }}" type="image/x-icon">
+  <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@600&display=swap" rel="stylesheet">
+</head>
+
+<body>
+  <main class="container">
+    <h1>Welcome to Automated Attendance System</h1>
+
+    <section class="button-container">
+      <!-- Register -->
+      <div class="image-button-pair">
+        <img src="{{ url_for('static', filename='register-image.jpg') }}" class="icon_image" alt="Register a face">
+        <a href="{{ url_for('register') }}" class="button button-register" role="button" aria-label="Register a new face">
+          Register a Face
+        </a>
+      </div>
+
+      <!-- Train -->
+      <div class="image-button-pair">
+        <img src="{{ url_for('static', filename='train-image.jpg') }}" class="icon_image" alt="Train model">
+        <a href="{{ url_for('train') }}" class="button button-train" role="button" aria-label="Train the face recognition model">
+          Train Model
+        </a>
+      </div>
+
+      <!-- Attendance -->
+      <div class="image-button-pair">
+        <img src="{{ url_for('static', filename='attendance-image.jpg') }}" class="icon_image" alt="Mark attendance">
+        <a href="{{ url_for('attendance') }}" class="button button-attendance" role="button" aria-label="Mark your attendance with face recognition">
+          Mark Attendance
+        </a>
+      </div>
+
+      <!-- View -->
+      <div class="image-button-pair">
+        <img src="{{ url_for('static', filename='view-image.jpg') }}" class="icon_image" alt="View attendance record">
+        <a href="{{ url_for('view') }}" class="button button-view" role="button" aria-label="View attendance records">
+          View Attendance
+        </a>
+      </div>
+    </section>
+  </main>
+</body>
+</html>
