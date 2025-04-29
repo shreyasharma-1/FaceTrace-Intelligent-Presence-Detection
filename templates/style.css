@@ -1,0 +1,115 @@
+/* Body styles */
+body {
+    margin: 0;
+    padding: 0;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: #f3f3f3;                /* Fallback color */
+    background-image: url('background.png');   /* Make sure background.png is in static/ */
+    background-size: cover;                    /* Cover entire viewport */
+    background-position: center;               /* Center image */
+    background-repeat: no-repeat;              /* No tiling */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;                             /* Full viewport height */
+    text-align: center;
+}
+
+/* Main container */
+.container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    max-width: 800px;
+    padding: 50px 20px;
+}
+
+/* Page heading */
+h1 {
+    margin-bottom: 50px;
+    font-size: 2.5rem;
+    color: #ffffff;
+    font-family: 'Poppins', Tahoma;
+}
+
+/* Button grid */
+.button-container {
+    display: flex;
+    flex-wrap: wrap;       /* Wrap on small screens */
+    justify-content: center;
+    gap: 40px;             /* Space between cards */
+}
+
+/* Card for each image + button */
+.image-button-pair {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 200px;
+    padding: 20px;
+    background-color: #ffffff;
+    border-radius: 15px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    transition: transform 0.2s ease;
+}
+.image-button-pair:hover {
+    transform: scale(1.05);
+}
+
+/* Icon above each button */
+.icon_image {
+    width: 100px;
+    height: 100px;
+    object-fit: contain;
+    margin-bottom: 15px;
+}
+
+/* Base button style */
+.button {
+    padding: 10px 20px;
+    text-decoration: none;
+    font-weight: 600;
+    border-radius: 8px;
+    border: 2px solid transparent;
+    transition: all 0.3s ease;
+    font-size: 1rem;
+    color: black;
+    background-color: white;
+}
+
+/* Register button */
+.button-register {
+    border-color: #2196F3; /* Blue */
+}
+.button-register:hover {
+    background-color: #2196F3;
+    color: black;
+}
+
+/* Train button */
+.button-train {
+    border-color: #FF9800; /* Orange */
+}
+.button-train:hover {
+    background-color: #FF9800;
+    color: black;
+}
+
+/* Attendance button */
+.button-attendance {
+    border-color: #4CAF50; /* Green */
+}
+.button-attendance:hover {
+    background-color: #4CAF50;
+    color: black;
+}
+
+/* View button */
+.button-view {
+    border-color: #9C27B0; /* Purple */
+}
+.button-view:hover {
+    background-color: #9C27B0;
+    color: black;
+}
